@@ -27,5 +27,5 @@ parser(xml, function (error, result) {
 
 ## Known issues
 
- * The namespace attribute isn't translated to the JavaScript object as the libxmljs treats it different from the sax-js parser. The sax-js simply places it as a simple attribute.
+ * The namespace attribute isn't translated to the JavaScript object as the libxmljs treats it different from the [sax-js](https://github.com/isaacs/sax-js) parser. The sax-js simply places it as a simple attribute.
  * The behavior for nodes that use namespaces is untested vs. the output of xml2js.
