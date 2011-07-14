@@ -12,7 +12,7 @@ Either manually clone this repository into your node_modules directory, or the r
 
 ## Usage mode
 
-<pre>
+```javascript
 var parser = require('libxml-to-js');
 var xml = 'xml string';
 
@@ -23,7 +23,7 @@ parser(xml, function (error, result) {
 		console.log(result);
 	}
 });
-</pre>
+```
 
 ## Known issues
 
