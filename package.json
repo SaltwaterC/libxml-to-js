@@ -1,6 +1,6 @@
 {
 	"name": "libxml-to-js",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"main": "./lib/libxml-to-js.js",
 	"description": "XML to JavaScript object parser based on libxmljs",
 	"dependencies": {
@@ -13,5 +13,10 @@
 	"author": {
 		"name": "Stefan Rusu",
 		"url": "http://www.saltwaterc.eu/"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/SaltwaterC/libxml-to-js.git"
+	},
+	"keywords": ["xml", "javascript", "object", "parser", "libxml", "libxmljs"]
 }
