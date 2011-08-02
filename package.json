@@ -1,6 +1,6 @@
 {
 	"name": "libxml-to-js",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"main": "./lib/libxml-to-js.js",
 	"description": "XML to JavaScript object parser based on libxmljs",
 	"dependencies": {
