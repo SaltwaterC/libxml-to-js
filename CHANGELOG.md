@@ -1,3 +1,6 @@
+## v0.2.2
+ * Cleaned up the garbage from the npm published package.
+
 ## v0.2.1
  * Updated the package.json file with more data.
 
