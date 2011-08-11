@@ -1,6 +1,6 @@
 {
 	"name": "libxml-to-js",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"main": "./lib/libxml-to-js.js",
 	"description": "XML to JavaScript object parser based on libxmljs",
 	"dependencies": {
@@ -18,5 +18,5 @@
 		"type": "git",
 		"url": "git://github.com/SaltwaterC/libxml-to-js.git"
 	},
-	"keywords": ["xml", "javascript", "object", "parser", "libxml", "libxmljs"]
+	"keywords": ["xml", "javascript", "object", "parser", "libxml", "libxmljs", "namespace", "cdata"]
 }
