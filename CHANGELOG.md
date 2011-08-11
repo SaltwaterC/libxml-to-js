@@ -1,6 +1,7 @@
 ## v0.3.1
  * The returned error argument is now an instance of Error().
  * In case of error, the result argument is not returned.
+ * Ignores the namespace prefix if the namespace prefix is null.
 
 ## v0.3
  * The error argument is null in case of successful execution in order to follow the node.js convention. This may break some code if the evaluation is made against 'undefined'.
