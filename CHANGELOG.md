@@ -1,3 +1,6 @@
+## v0.3.2
+ * Does not return the namespace at all if the prefix is null.
+
 ## v0.3.1
  * The returned error argument is now an instance of Error().
  * In case of error, the result argument is not returned.
