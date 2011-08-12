@@ -1,3 +1,6 @@
+## v0.3.3
+ * Refactored the namespace support in order to make it more stable. The parser used to crash for large XML documents in an undeterministic manner (missing method errors or segmentation faults, for the same input).
+
 ## v0.3.2
  * Does not return the namespace at all if the prefix is null.
 
