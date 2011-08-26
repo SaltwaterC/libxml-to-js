@@ -12,3 +12,9 @@ parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), function (err, res
 	assert.equal(res.channel.item.title, 'Hello world!');
 	assert.equal(res.channel.item.category, 'Uncategorized'); // CDATA element
 });
+
+parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), '//dc:creator', function (err, res) {
+  assert.ifError(err);
+  assert.strictEqual(res.length, 1);
+  assert.strictEqual(res[0]['#'], 'admin');
+});
