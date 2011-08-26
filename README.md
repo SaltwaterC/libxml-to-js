@@ -78,4 +78,4 @@ is parsed as:
 
 ## Contributors
 
- * @Marsup: XPath queries support.
+ * @[Marsup](https://github.com/Marsup): XPath queries support.
