@@ -25,6 +25,18 @@ parser(xml, function (error, result) {
 });
 ```
 
+With XPath query:
+
+```javascript
+parser(xml, '//xpath/query', function (error, result) {
+	if (error) {
+		console.error(error);
+	} else {
+		console.log(result);
+	}
+});
+```
+
 ## Gotcha
 
 Due to the fact that libxmljs does not have any method for returning the namespace attributes of a specific element, the returned namespaces aren't returned into an obvious way:
@@ -63,3 +75,7 @@ is parsed as:
 // the rest of the doc
 }
 ```
+
+## Contributors
+
+ * @Marsup: XPath queries support.
