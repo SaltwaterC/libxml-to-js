@@ -78,4 +78,5 @@ is parsed as:
 
 ## Contributors
 
+ * @[Brian White](https://github.com/mscdex): The original algorithm for converting a parsed XML doc into JavaScript object.
  * @[Marsup](https://github.com/Marsup): XPath queries support.
