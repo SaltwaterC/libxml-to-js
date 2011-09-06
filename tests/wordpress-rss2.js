@@ -3,7 +3,11 @@ var parser = require('../');
 var fs = require('fs');
 var assert = require('assert');
 
+var callback = false;
+var callbackXPath = false;
+
 parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), function (err, res) {
+	callback = true;
 	assert.ifError(err);
 	assert.equal(res['@'].version, '2.0');
 	assert.equal(res['@'].xmlns.atom, 'http://www.w3.org/2005/Atom');
@@ -14,7 +18,13 @@ parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), function (err, res
 });
 
 parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), '//dc:creator', function (err, res) {
-  assert.ifError(err);
-  assert.strictEqual(res.length, 1);
-  assert.strictEqual(res[0]['#'], 'admin');
+	callbackXPath = true;
+	assert.ifError(err);
+	assert.strictEqual(res.length, 1);
+	assert.strictEqual(res[0]['#'], 'admin');
+});
+
+process.on('exit', function () {
+	assert.ok(callback);
+	assert.ok(callbackXPath);
 });
