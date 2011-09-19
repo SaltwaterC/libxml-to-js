@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<nouvelle>
+  <news>
+    <auteur>Bizzard5</auteur>
+    <date>17 Août 2008</date>
+    <text></text>
+  </news>
+  <news>
+    <auteur>Little</auteur>
+    <date>18 Août 2007</date>
+    <text><test>test</test></text>
+  </news>
+  <news>
+    <auteur>Bizzard5</auteur>
+    <date>17 Août 2008</date>
+    <text>C'est un teste</text>
+  </news>
+  <news>
+    <auteur>Little</auteur>
+    <date>18 Août 2007</date>
+    <text>Allo</text>
+  </news>
+  <news>
+    <auteur>Little</auteur>
+    <date>18 Août 2007</date>
+    <text><text>test</text></text>
+  </news>
+</nouvelle>
+
