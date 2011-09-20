@@ -80,3 +80,4 @@ is parsed as:
 
  * @[Brian White](https://github.com/mscdex): The original algorithm for converting a parsed XML doc into JavaScript object.
  * @[Marsup](https://github.com/Marsup): XPath queries support.
+ * @[VirgileD](https://github.com/VirgileD): improved text kludge and namespaces support

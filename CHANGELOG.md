@@ -1,3 +1,6 @@
+## v0.3.5
+ * Improved the text kludge and namespaces support. Thanks to @[VirgileD](https://github.com/VirgileD) for the contribution.
+
 ## v0.3.4
  * XPath queries support for parsing just parts of the XML document. Thanks to @[Marsup](https://github.com/Marsup) for the contribution.
 
