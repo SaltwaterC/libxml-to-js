@@ -3,7 +3,10 @@ var parser = require('../');
 var fs = require('fs');
 var assert = require('assert');
 
+var callback = false;
+
 parser(fs.readFileSync('data/text.xml').toString(), function (err, res) {
+	callback = true;
 	assert.ifError(err);
 	assert.deepEqual({
 		'news': [{
@@ -33,4 +36,8 @@ parser(fs.readFileSync('data/text.xml').toString(), function (err, res) {
 		}]
 	},
 	res);
+});
+
+process.on('exit', function () {
+	assert.ok(callback);
 });
