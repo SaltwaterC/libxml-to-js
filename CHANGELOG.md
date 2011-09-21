@@ -1,3 +1,6 @@
+## v0.3.6
+ * Fixes [#5](https://github.com/SaltwaterC/libxml-to-js/pull/5) which was introduced in v0.3.5.
+
 ## v0.3.5
  * Improved the text kludge and namespaces support. Thanks to @[VirgileD](https://github.com/VirgileD) for the contribution.
 
