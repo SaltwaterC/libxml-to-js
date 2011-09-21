@@ -4,6 +4,7 @@ var fs = require('fs');
 var assert = require('assert');
 
 var callback = false;
+var callbackXPath = false;
 
 parser(fs.readFileSync('data/text.xml').toString(), function (err, res) {
 	callback = true;
@@ -38,6 +39,18 @@ parser(fs.readFileSync('data/text.xml').toString(), function (err, res) {
 	res);
 });
 
+parser(fs.readFileSync('data/text.xml').toString(), '//nouvelle/news', function (err, res) {
+	callbackXPath = true;
+	assert.ifError(err);
+	assert.deepEqual({
+		"auteur": "Bizzard5",
+		"date": "17 Août 2008",
+		"text": {}
+	},
+	res[0]);
+});
+
 process.on('exit', function () {
 	assert.ok(callback);
+	assert.ok(callbackXPath);
 });
