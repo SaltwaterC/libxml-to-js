@@ -34,3 +34,13 @@ parser(fs.readFileSync('data/text.xml').toString(), function (err, res) {
 	},
 	res);
 });
+
+parser(fs.readFileSync('data/text.xml').toString(), '//nouvelle/news', function (err, res) {
+	assert.ifError(err);
+	assert.deepEqual({
+		"auteur": "Bizzard5",
+		"date": "17 Août 2008",
+		"text": {}
+	},
+	res[0]);
+});
