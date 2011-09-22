@@ -1,6 +1,6 @@
 {
 	"name": "libxml-to-js",
-	"version": "0.3.6",
+	"version": "0.3.7",
 	"main": "./lib/libxml-to-js.js",
 	"description": "XML to JavaScript object parser based on libxmljs",
 	"dependencies": {
@@ -14,7 +14,8 @@
 		"name": "Stefan Rusu",
 		"url": "http://www.saltwaterc.eu/"
 	},
-	"contributors": [ {
+	"contributors": [
+		{
 			"name": "Brian White",
 			"url": "http://mscdex.net/"
 		},

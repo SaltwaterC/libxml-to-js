@@ -1,5 +1,5 @@
 ## v0.3.7
- * Fixes [#6](https://github.com/SaltwaterC/libxml-to-js/issues/6) simple test case losing attribute name. Thanks to Richard Anaya for the contribution.
+ * Fixes [#6](https://github.com/SaltwaterC/libxml-to-js/issues/6) simple test case losing attribute name. Thanks to [Richard Anaya](https://github.com/richardanaya) for the contribution.
 
 ## v0.3.6
  * Fixes [#5](https://github.com/SaltwaterC/libxml-to-js/pull/5) which was introduced in v0.3.5.
