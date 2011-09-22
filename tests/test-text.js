@@ -6,7 +6,9 @@ var assert = require('assert');
 var callback = false;
 var callbackXPath = false;
 
-parser(fs.readFileSync('data/text.xml').toString(), function (err, res) {
+var xml = fs.readFileSync('data/text.xml').toString();
+
+parser(xml, function (err, res) {
 	callback = true;
 	assert.ifError(err);
 	assert.deepEqual({
@@ -39,7 +41,7 @@ parser(fs.readFileSync('data/text.xml').toString(), function (err, res) {
 	res);
 });
 
-parser(fs.readFileSync('data/text.xml').toString(), '//nouvelle/news', function (err, res) {
+parser(xml, '//nouvelle/news', function (err, res) {
 	callbackXPath = true;
 	assert.ifError(err);
 	assert.deepEqual({

@@ -6,7 +6,9 @@ var assert = require('assert');
 var callback = false;
 var callbackXPath = false;
 
-parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), function (err, res) {
+var xml = fs.readFileSync('data/wordpress-rss2.xml').toString();
+
+parser(xml, function (err, res) {
 	callback = true;
 	assert.ifError(err);
 	assert.equal(res['@'].version, '2.0');
@@ -17,7 +19,7 @@ parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), function (err, res
 	assert.equal(res.channel.item.category, 'Uncategorized'); // CDATA element
 });
 
-parser(fs.readFileSync('data/wordpress-rss2.xml').toString(), '//dc:creator', function (err, res) {
+parser(xml, '//dc:creator', function (err, res) {
 	callbackXPath = true;
 	assert.ifError(err);
 	assert.strictEqual(res.length, 1);
