@@ -1,3 +1,6 @@
+## v0.3.8
+ * Fixes [#8](https://github.com/SaltwaterC/libxml-to-js/issues/8) regarding the error handling inside the passed callback to the parser. Thanking [kongelaks](https://github.com/kongelaks) for reporting it.
+
 ## v0.3.7
  * Fixes [#6](https://github.com/SaltwaterC/libxml-to-js/issues/6) simple test case losing attribute name. Thanks to [Richard Anaya](https://github.com/richardanaya) for the contribution.
 
