@@ -1,3 +1,6 @@
+## v0.3.9
+ * Takes a more safe approach to the err argument of the catch block in the exported method. It proves that in production the err argument may be undefined which breaks things.
+
 ## v0.3.8
  * Fixes [#8](https://github.com/SaltwaterC/libxml-to-js/issues/8) regarding the error handling inside the passed callback to the parser. Thanking [kongelaks](https://github.com/kongelaks) for reporting it.
 
