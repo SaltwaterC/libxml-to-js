@@ -39,7 +39,7 @@ parser(xml, '//xpath/query', function (error, result) {
 
 ## Gotcha
 
-Due to the fact that libxmljs does not have any method for returning the namespace attributes of a specific element, the returned namespaces aren't returned into an obvious way:
+Due to the fact that libxmljs does not have any method for returning the namespace attributes of a specific element, the returned namespaces aren't returned as expected:
 
  * the returned namespaces are only the actual used namespaces by the XML document. If there are unused namespaces, they aren't returned. This is a consequence of the fact that the namespaces are pushed into the returned object as they are detected by the parsing recursion.
  * the returned namespaces are attached as attributes to the root element, into the xmlns key in order to keep the code simple.
@@ -82,3 +82,4 @@ is parsed as:
  * @[Marsup](https://github.com/Marsup): XPath queries support.
  * @[VirgileD](https://github.com/VirgileD): improved text kludge and namespaces support
  * @[Richard Anaya](https://github.com/richardanaya): fix for [#6](https://github.com/SaltwaterC/libxml-to-js/issues/6)
+ * @[TokyoIncidents](https://github.com/TokyoIncidents): fixes a couple of global variables leaks [#10](https://github.com/SaltwaterC/libxml-to-js/pull/10)

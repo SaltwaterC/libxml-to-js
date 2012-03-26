@@ -1,3 +1,6 @@
+## v0.3.10
+ * Fixes a couple of global variable leaks [#10](https://github.com/SaltwaterC/libxml-to-js/pull/10).
+
 ## v0.3.9
  * Takes a more safe approach to the err argument of the catch block in the exported method. It proves that in production the err argument may be undefined which breaks things.
 
