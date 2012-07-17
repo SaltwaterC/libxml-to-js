@@ -10,6 +10,8 @@ Either manually clone this repository into your node_modules directory, or the r
 
 > npm install libxml-to-js
 
+The installation of the underlying dependency, **libxmljs**, fails if you don't have gcc (or compatible compiler), the [libxml2](http://en.wikipedia.org/wiki/Libxml2) development headers, and the xml2-config script. Under various Linux distributions you may install the appropriate libxml2 development package: libxml2-dev (Debian, Ubuntu, etc), libxml2-devel (RHEL, CentOS, Fedora, etc).
+
 ## Usage mode
 
 ```javascript
