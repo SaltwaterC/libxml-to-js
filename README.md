@@ -85,3 +85,4 @@ is parsed as:
  * @[VirgileD](https://github.com/VirgileD): improved text kludge and namespaces support
  * @[Richard Anaya](https://github.com/richardanaya): fix for [#6](https://github.com/SaltwaterC/libxml-to-js/issues/6)
  * @[TokyoIncidents](https://github.com/TokyoIncidents): fixes a couple of global variables leaks [#10](https://github.com/SaltwaterC/libxml-to-js/pull/10)
+ * @[XApp-Studio](https://github.com/XApp-Studio): more support for CDATA elements [#13](https://github.com/SaltwaterC/libxml-to-js/issues/13)

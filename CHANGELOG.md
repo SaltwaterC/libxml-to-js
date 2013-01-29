@@ -1,3 +1,6 @@
+## v0.3.11
+ * Adds more CDATA support [#13](https://github.com/SaltwaterC/libxml-to-js/issues/13). Thanking XApp-Studio for the patch.
+
 ## v0.3.10
  * Fixes a couple of global variable leaks [#10](https://github.com/SaltwaterC/libxml-to-js/pull/10).
 
