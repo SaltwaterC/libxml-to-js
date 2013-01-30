@@ -1,6 +1,6 @@
-## About
+## About [![build status](https://secure.travis-ci.org/SaltwaterC/libxml-to-js.png?branch=master)](http://travis-ci.org/SaltwaterC/libxml-to-js) ![still maintained](http://stillmaintained.com/SaltwaterC/libxml-to-js.png)
 
-This is a XML to JavaScript object parser. It uses the [libxmljs](https://github.com/polotek/libxmljs) module for the actual XML parsing. It aims to be an easy [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) replacement, but it doesn't follow the xml2js API. I used xml2js for my own needs, but the error reporting of the underlying SAX parser is quite broken. This is how libxml-to-js saw the day light.
+This is a XML to JavaScript object parser. It uses the [libxmljs](https://github.com/polotek/libxmljs) module for the actual XML parsing. It aims to be an easy [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) v1 replacement, but it doesn't follow the xml2js API.
 
 libxml-to-js uses the string parser method of libxmljs. Basically a modified version of the algorithm from [here](http://mscdex.net/code-snippets/) in order to fit the formal specifications of xml2js output.
 

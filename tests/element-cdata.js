@@ -1,20 +1,25 @@
+'use strict';
+
 var parser = require('../');
 
 var fs = require('fs');
 var assert = require('assert');
 
-var xml = fs.readFileSync('data/element-cdata.xml').toString();
+var common = require('./includes/common.js');
 
-var callback = false;
+var callbacks = {
+	parse: 0
+};
 
-parser(xml, function (err, res) {
-	callback = true;
-	assert.ifError(err);
-	assert.strictEqual(res.phrase['#'], 'Home');
-	assert.strictEqual(res.phrase['@'].section, 'default');
-	assert.strictEqual(res.phrase['@'].code, 'widgethome');
+fs.readFile('data/element-cdata.xml', function (err, xml) {
+	parser(xml, function (err, res) {
+		callbacks.parse++;
+		
+		assert.ifError(err);
+		assert.strictEqual(res.phrase['#'], 'Home');
+		assert.strictEqual(res.phrase['@'].section, 'default');
+		assert.strictEqual(res.phrase['@'].code, 'widgethome');
+	});
 });
 
-process.on('exit', function () {
-	assert.ok(callback);
-});
+common.teardown(callbacks);

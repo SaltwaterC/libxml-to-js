@@ -1,23 +1,35 @@
+'use strict';
+
 var parser = require('../');
 
 var fs = require('fs');
 var assert = require('assert');
 
-var callback = false;
+var common = require('./includes/common.js');
 
-parser(fs.readFileSync('data/namespace.xml').toString(), function (err, res) {
-	callback = true;
-	assert.ifError(err);
-	assert.equal(res['@'].xmlns.atom, 'http://www.w3.org/2005/Atom');
-	for (var i in res['atom:link']) {
-		var atom = res['atom:link'][i];
-		assert.equal(atom['@'].rel, 'self');
-		assert.equal(atom['@'].type, 'application/rss+xml');
-	}
-	assert.equal(res['atom:link'][0]['@'].href, 'http://localhost/wordpress/?feed=rss');
-	assert.equal(res['atom:link'][1]['@'].href, 'http://localhost/wordpress/?feed=rss2');
+var callbacks = {
+	parse: 0
+};
+
+fs.readFile('data/namespace.xml', function (err, xml) {
+	parser(xml, function (err, res) {
+		var i;
+		callbacks.parse++;
+		
+		assert.ifError(err);
+		assert.strictEqual(res['@'].xmlns.atom, 'http://www.w3.org/2005/Atom');
+		
+		for (i in res['atom:link']) {
+			if (res['atom:link'].hasOwnProperty(i)) {
+				var atom = res['atom:link'][i];
+				assert.strictEqual(atom['@'].rel, 'self');
+				assert.strictEqual(atom['@'].type, 'application/rss+xml');
+			}		
+		}
+		
+		assert.strictEqual(res['atom:link'][0]['@'].href, 'http://localhost/wordpress/?feed=rss');
+		assert.strictEqual(res['atom:link'][1]['@'].href, 'http://localhost/wordpress/?feed=rss2');
+	});
 });
 
-process.on('exit', function () {
-	assert.ok(callback);
-});
+common.teardown(callbacks);

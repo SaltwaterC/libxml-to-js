@@ -1,15 +1,22 @@
+'use strict';
+
 var parser = require('../');
 
 var fs = require('fs');
 var assert = require('assert');
 
-var callback = false;
-var callbackXPath = false;
+var common = require('./includes/common.js');
+
+var callbacks = {
+	parse: 0,
+	parseXpath: 0
+};
 
 var xml = '<thing><real id="width">300</real><real id="height">200</real></thing>';
 
 parser(xml, function (err, res) {
-	callback = true;
+	callbacks.parse++;
+	
 	assert.ifError(err);
 	assert.deepEqual({
 		"real": [{
@@ -28,7 +35,8 @@ parser(xml, function (err, res) {
 });
 
 parser(xml, '//thing/real', function (err, res) {
-	callbackXPath = true;
+	callbacks.parseXpath++;
+	
 	assert.ifError(err);
 	assert.deepEqual([
 		{
@@ -46,7 +54,4 @@ parser(xml, '//thing/real', function (err, res) {
 	res);
 });
 
-process.on('exit', function () {
-	assert.ok(callback);
-	assert.ok(callbackXPath);
-});
+common.teardown(callbacks);

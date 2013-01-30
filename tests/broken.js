@@ -1,16 +1,21 @@
+'use strict';
+
 var parser = require('../');
 
 var fs = require('fs');
 var assert = require('assert');
 
-var callback = false;
+var common = require('./includes/common.js');
+
+var callbacks = {
+	parse: 0
+};
 
 parser('This is a broken XML file.', function (err, res) {
-	callback = true;
+	callbacks.parse++;
+	
 	assert.ok(err instanceof Error);
-	assert.equal(err.code, 4);
+	assert.strictEqual(err.code, 4);
 });
 
-process.on('exit', function () {
-	assert.ok(callback);
-});
+common.teardown(callbacks);

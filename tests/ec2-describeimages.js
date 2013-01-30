@@ -1,28 +1,35 @@
+'use strict';
+
 var parser = require('../');
 
 var fs = require('fs');
 var assert = require('assert');
 
-var callback = false;
-var callbackXPath = false;
+var common = require('./includes/common.js');
 
-var xml = fs.readFileSync('data/ec2-describeimages.xml').toString();
+var callbacks = {
+	parse: 0,
+	parseXpath: 0
+};
 
-parser(xml, function (err, res) {
-	callback = true;
+fs.readFile('data/ec2-describeimages.xml', function (err, xml) {
 	assert.ifError(err);
-	assert.equal(res.imagesSet.item[0].imageId, 'ami-be3adfd7');
-	assert.equal(res.imagesSet.item[1].imageId, 'ami-be3adfd9');
+	
+	parser(xml, function (err, res) {
+		callbacks.parse++;
+		
+		assert.ifError(err);
+		assert.strictEqual(res.imagesSet.item[0].imageId, 'ami-be3adfd7');
+		assert.strictEqual(res.imagesSet.item[1].imageId, 'ami-be3adfd9');
+	});
+	
+	parser(xml, '//xmlns:blockDeviceMapping', function (err, res) {
+		callbacks.parseXpath++;
+		
+		assert.ifError(err);
+		assert.strictEqual(res.length, 2);
+		assert.strictEqual(res[0].item.deviceName, '/dev/sda');
+	});
 });
 
-parser(xml, '//xmlns:blockDeviceMapping', function (err, res) {
-	callbackXPath = true;
-	assert.ifError(err);
-	assert.strictEqual(res.length, 2);
-	assert.strictEqual(res[0].item.deviceName, '/dev/sda');
-});
-
-process.on('exit', function () {
-	assert.ok(callback);
-	assert.ok(callbackXPath);
-});
+common.teardown(callbacks);
