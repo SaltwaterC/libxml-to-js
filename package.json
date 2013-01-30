@@ -36,6 +36,10 @@
 			"name": "TokyoIncidents",
 			"url": "https://github.com/TokyoIncidents"
 		}
+		{
+			"name": "XApp-Studio",
+			"url": "https://github.com/XApp-Studio"
+		}
 	],
 	"repository": {
 		"type": "git",
