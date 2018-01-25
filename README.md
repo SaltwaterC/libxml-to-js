@@ -17,11 +17,11 @@ var parser = require('libxml-to-js');
 var xml = 'xml string';
 
 parser(xml, function (error, result) {
-	if (error) {
-		console.error(error);
-	} else {
-		console.log(result);
-	}
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(result);
+  }
 });
 ```
 
@@ -29,11 +29,11 @@ With XPath query:
 
 ```javascript
 parser(xml, '//xpath/query', function (error, result) {
-	if (error) {
-		console.error(error);
-	} else {
-		console.log(result);
-	}
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(result);
+  }
 });
 ```
 
