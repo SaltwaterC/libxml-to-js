@@ -36,7 +36,7 @@ do
 
 		if [ $EXIT_CODE -ne 0 ]
 		then
-			echo -e "\n\e[0;31mFailed: $TEST_FILE\e[0m\n"
+			echo "Failed: $TEST_FILE"
 			FAIL=$(($FAIL + 1))
 		else
 			SUCCESS=$(($SUCCESS+1))
@@ -46,15 +46,8 @@ do
 done
 
 echo ""
-if [ $FAIL -eq 0 ]
-then
-	# green
-	echo -e "\e[0;32mFailed tests: $FAIL\e[0m"
-else
-	#red
-	echo -e "\e[0;31mFailed tests: $FAIL\e[0m"
-fi
-echo -e "\033[1mTotal tests: $TOTAL\033[0m"
+echo "Failed tests: $FAIL"
+echo "Total tests: $TOTAL"
 echo ""
 
 if [ $FAIL -eq 0 ]

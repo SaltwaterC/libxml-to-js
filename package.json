@@ -1,62 +1,70 @@
 {
-	"name": "libxml-to-js",
-	"version": "0.3.11",
-	"main": "./lib/libxml-to-js.js",
-	"description": "XML to JavaScript object parser based on libxmljs",
-	"dependencies": {
-		"libxmljs": ">=0.5.x",
-		"lodash": "*"
-	},
-	"engines": {
-		"node": ">=0.4.x"
-	},
-	"homepage": "https://github.com/SaltwaterC/libxml-to-js",
-	"author": {
-		"name": "Stefan Rusu",
-		"url": "http://www.saltwaterc.eu/"
-	},
-	"contributors": [
-		{
-			"name": "Brian White",
-			"url": "http://mscdex.net/"
-		},
-		{
-			"name": "Nicolas Morel",
-			"url": "https://github.com/Marsup"
-		},
-		{
-			"name": "VirgileD",
-			"url": "https://github.com/VirgileD"
-		},
-		{
-			"name": "Richard Anaya",
-			"url": "http://www.richardanaya.com/"
-		},
-		{
-			"name": "TokyoIncidents",
-			"url": "https://github.com/TokyoIncidents"
-		},
-		{
-			"name": "XApp-Studio",
-			"url": "https://github.com/XApp-Studio"
-		}
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/SaltwaterC/libxml-to-js.git"
-	},
-	"keywords": [
-		"xml",
-		"javascript",
-		"object",
-		"parser",
-		"libxml",
-		"libxmljs",
-		"namespace",
-		"cdata",
-		"xpath"
-	],
-	"scripts": {
-		"test": "make test"
-	}
+  "name": "libxml-to-js",
+  "version": "0.3.11",
+  "main": "./lib/libxml-to-js.js",
+  "description": "XML to JavaScript object parser based on libxmljs",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "libxmljs": ">=0.5.x",
+    "lodash": "*"
+  },
+  "devDependencies": {
+    "mocha": "= 5.0.0",
+    "chai": "= 4.1.2",
+    "js-beautify": "= 1.7.5",
+    "jshint": "= 2.9.5",
+    "find": "= 0.2.8",
+    "rimraf": "= 2.6.2"
+  },
+  "engines": {
+    "node": ">=0.4.x"
+  },
+  "homepage": "https://github.com/SaltwaterC/libxml-to-js",
+  "author": {
+    "name": "Stefan Rusu",
+    "url": "http://www.saltwaterc.eu/"
+  },
+  "contributors": [{
+      "name": "Brian White",
+      "url": "http://mscdex.net/"
+    },
+    {
+      "name": "Nicolas Morel",
+      "url": "https://github.com/Marsup"
+    },
+    {
+      "name": "VirgileD",
+      "url": "https://github.com/VirgileD"
+    },
+    {
+      "name": "Richard Anaya",
+      "url": "http://www.richardanaya.com/"
+    },
+    {
+      "name": "TokyoIncidents",
+      "url": "https://github.com/TokyoIncidents"
+    },
+    {
+      "name": "XApp-Studio",
+      "url": "https://github.com/XApp-Studio"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SaltwaterC/libxml-to-js.git"
+  },
+  "keywords": [
+    "xml",
+    "javascript",
+    "object",
+    "parser",
+    "libxml",
+    "libxmljs",
+    "namespace",
+    "cdata",
+    "xpath"
+  ],
+  "scripts": {
+    "test": "jake test"
+  }
 }
