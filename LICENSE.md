@@ -1,6 +1,6 @@
 # libxml-to-js license
 
-Copyright (c) 2011, Ștefan Rusu All rights reserved.
+Copyright (c) 2011-2018, Ștefan Rusu All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
