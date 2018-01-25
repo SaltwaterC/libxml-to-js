@@ -1,3 +1,7 @@
+## v0.3.12
+ * Fixes [#16](https://github.com/SaltwaterC/libxml-to-js/issues/16) - Entities remain in output object text.
+ * Replace the development tooling.
+
 ## v0.3.11
  * Adds more CDATA support [#13](https://github.com/SaltwaterC/libxml-to-js/issues/13). Thanking XApp-Studio for the patch.
  * jslint compliant.
