@@ -49,13 +49,13 @@ Example from the WordPress RSS 2 feed:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-	>
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  >
 <!-- the rest of the doc -->
 </rss>
 ```
@@ -64,8 +64,8 @@ is parsed as:
 
 ```javascript
 { '@':
-   { version: '2.0',
-     xmlns:
+  { version: '2.0',
+    xmlns:
       { atom: 'http://www.w3.org/2005/Atom',
         sy: 'http://purl.org/rss/1.0/modules/syndication/',
         dc: 'http://purl.org/dc/elements/1.1/',
