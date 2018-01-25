@@ -1,4 +1,4 @@
-## About [![build status](https://secure.travis-ci.org/SaltwaterC/libxml-to-js.png?branch=master)](http://travis-ci.org/SaltwaterC/libxml-to-js) ![still maintained](http://stillmaintained.com/SaltwaterC/libxml-to-js.png)
+## About [![build status](https://secure.travis-ci.org/SaltwaterC/libxml-to-js.png?branch=master)](http://travis-ci.org/SaltwaterC/libxml-to-js) [![NPM version](https://badge.fury.io/js/libxml-to-js.png)](http://badge.fury.io/js/libxml-to-js)
 
 This is a XML to JavaScript object parser. It uses the [libxmljs](https://github.com/polotek/libxmljs) module for the actual XML parsing. It aims to be an easy [xml2js](https://github.com/Leonidas-from-XIV/node-xml2js) v1 replacement, but it doesn't follow the xml2js API.
 
@@ -6,9 +6,7 @@ libxml-to-js uses the string parser method of libxmljs. Basically a modified ver
 
 ## Installation
 
-Either manually clone this repository into your node_modules directory, or the recommended method:
-
-> npm install libxml-to-js
+    npm install libxml-to-js
 
 The installation of the underlying dependency, **libxmljs**, fails if you don't have gcc (or compatible compiler), the [libxml2](http://en.wikipedia.org/wiki/Libxml2) development headers, and the xml2-config script. Under various Linux distributions you may install the appropriate libxml2 development package: libxml2-dev (Debian, Ubuntu, etc), libxml2-devel (RHEL, CentOS, Fedora, etc).
 
@@ -65,9 +63,9 @@ Example from the WordPress RSS 2 feed:
 is parsed as:
 
 ```javascript
-{ '@': 
+{ '@':
    { version: '2.0',
-     xmlns: 
+     xmlns:
       { atom: 'http://www.w3.org/2005/Atom',
         sy: 'http://purl.org/rss/1.0/modules/syndication/',
         dc: 'http://purl.org/dc/elements/1.1/',
