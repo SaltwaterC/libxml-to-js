@@ -1,3 +1,9 @@
-.project
-.settings/
-*.komodoproject
+node_modules
+package-lock.json
+.DS_Store
+test
+.jsbeautifyrc
+.jshintignore
+.jshintrc
+.travis.yml
+Jakefile
