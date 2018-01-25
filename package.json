@@ -45,8 +45,17 @@
 		"type": "git",
 		"url": "git://github.com/SaltwaterC/libxml-to-js.git"
 	},
-	"keywords": ["xml", "javascript", "object", "parser", "libxml", "libxmljs",
-		"namespace", "cdata", "xpath"],
+	"keywords": [
+		"xml",
+		"javascript",
+		"object",
+		"parser",
+		"libxml",
+		"libxmljs",
+		"namespace",
+		"cdata",
+		"xpath"
+	],
 	"scripts": {
 		"test": "make test"
 	}
