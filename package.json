@@ -17,7 +17,7 @@
     "rimraf": "= 2.6.2"
   },
   "engines": {
-    "node": ">=0.4.x"
+    "node": ">= 4"
   },
   "homepage": "https://github.com/SaltwaterC/libxml-to-js",
   "author": {
